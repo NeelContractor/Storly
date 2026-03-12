@@ -14,7 +14,7 @@ module.exports = {
         roboto: ["Roboto", , ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "primary-color": "#fec734",
+        "primary-color": "#FFDBFD",
         "background-grayec": "#ececec",
         "background-grayfa": "#fafafa",
         rede7: "#e72b2b",

@@ -86,7 +86,7 @@ export default function SignIn() {
       "
       >
         <h1 className="font-bold text-5xl text-primary-color text-center mt-[80px] mb-7">
-          Sign in to Lighthouse
+          Sign in to Storly
         </h1>
         <div className="flex items-center justify-center gap-5 mb-12">
           <div className="h-12 w-12 rounded-full border shadow-sm flex-center">

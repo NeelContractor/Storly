@@ -391,7 +391,7 @@ export default function Layout({ children }: AppProps): JSX.Element {
         )}
         {showHeader && (
           <div className="fixed right-0 top-[60vh] bg-[#666] py-3 px-2 flex flex-col gap-3 z-30">
-            <Link href="https://www.facebook.com/fuocy" passHref>
+            {/* <Link href="https://www.facebook.com/fuocy" passHref>
               <a target="_blank">
                 <FaFacebookF className="text-xl text-[#999] hover:text-[#eee] transition cursor-pointer" />
               </a>
@@ -400,8 +400,8 @@ export default function Layout({ children }: AppProps): JSX.Element {
               <a target="_blank">
                 <BsYoutube className="text-xl text-[#999] hover:text-[#eee] transition cursor-pointer" />
               </a>
-            </Link>
-            <Link href="https://www.instagram.com/h2.huu_huan/" passHref>
+            </Link> */}
+            <Link href="https://www.instagram.com/storly.official/" passHref>
               <a target="_blank">
                 <BsInstagram className="text-xl text-[#999] hover:text-[#eee] transition cursor-pointer" />
               </a>
@@ -410,7 +410,7 @@ export default function Layout({ children }: AppProps): JSX.Element {
         )}
       </main>
 
-      {showHeader && (
+      {/* {showHeader && (
         <footer className="h-[38px] bg-[#333333] flex items-center px-10 justify-between">
           <p className="text-white">Copyright Fuocy © 2022</p>
           <div className="flex gap-4 items-center">
@@ -433,7 +433,7 @@ export default function Layout({ children }: AppProps): JSX.Element {
             </Link>
           </div>
         </footer>
-      )}
+      )} */}
     </>
   );
 }

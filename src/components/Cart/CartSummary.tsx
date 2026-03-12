@@ -194,8 +194,8 @@ export default function CartSummary() {
         className="uppercase  bg-primary-color font-extrabold text-xl 
         shadow-md rounded-sm
         active:shadow-sm active:scale-[.98] active:translate-y-0 
-        active:bg-[#e5b32f] 
-        hover:bg-[#fecd48] hover:-translate-y-[2px] 
+        active:bg-[#aa6085] 
+        hover:bg-[#f9c3c3] hover:-translate-y-[2px] 
         transition-all duration-[250ms] 
         z-10 relative overflow-hidden 
         w-full py-5
