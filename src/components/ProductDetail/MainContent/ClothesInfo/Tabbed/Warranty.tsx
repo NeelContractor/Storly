@@ -25,7 +25,7 @@ export default function Warranty() {
           WHICH PRODUCTS ARE ELIGIBLE FOR ONLINE REPAIRS?
         </h3>
         <p className="text-slate-700">
-          All Lighthouse leather goods and accessories are eligible.
+          All Storly leather goods and accessories are eligible.
           Unfortunately, we are not able to accept ready-to-wear for repair.
         </p>
       </div>

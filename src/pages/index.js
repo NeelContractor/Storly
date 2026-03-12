@@ -30,8 +30,8 @@ const HomePage = () => {
   return (
     <>
       <Meta
-        title="Lighthouse | Won't let you down"
-        description="Lighthouse used to be my everything."
+        title="Storly | Won't let you down"
+        description="Storly used to be my everything."
         image="/preview.png"
       />
 
@@ -86,21 +86,20 @@ const HomePage = () => {
               style={{ wordSpacing: "15px" }}
               className="text-[90px] font-bold tracking-tighter mb-10"
             >
-              <p className="whitespace-nowrap">DRESSES TO</p>
-              <p className="whitespace-nowrap">BE NOTICED</p>
+              <p className="whitespace-nowrap">TURN YOUR BIO LINK</p>
+              <p className="whitespace-nowrap">INTO A STORE</p>
             </p>
             <div className="!text-medium !border-l-4 !border-gray-200 !pl-5 !bg-white !leading-loose !text-lg !max-w-[500px]">
-              Fashion is part of the daily air and it changes all the time, with
-              all the events
+              Turn what you create into something people can buy.
             </div>
             <div className="mt-9 flex items-center gap-5">
               <Link href="/men">
                 <a
-                  className="uppercase bg-primary-color  font-medium text-lg
+                  className="uppercase bg-[#641f88] text-white font-medium text-lg
                 rounded-full
                 active:shadow-sm active:scale-[.98] active:translate-y-0 
-                active:bg-[#e5b32f] 
-                hover:bg-[#fecd48] hover:-translate-y-[2px] 
+                active:bg-[#641f88] 
+                hover:bg-[#c45dfc] hover:-translate-y-[2px] 
                 transition-all duration-[250ms] 
                 z-10 relative overflow-hidden 
                 py-3 px-5
