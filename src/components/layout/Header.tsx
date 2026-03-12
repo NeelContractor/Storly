@@ -1,5 +1,5 @@
 // import Image from "next/image";
-// import sun from "assets/sun.png";
+// import StorlyBG from "assets/StorlyBG.png";
 // import Navigation from "@/components/layout/Navigation";
 // import Link from "next/link";
 // import { HiOutlineUser } from "react-icons/hi";
@@ -56,8 +56,8 @@
 //               <span className="font-normal drop-shadow-logo">house</span>
 //               <div className="absolute -top-[3px] right-[31px] -z-10 h-10 w-10">
 //                 <Image
-//                   src={sun}
-//                   alt="the sun | cosmestic content"
+//                   src={Storly.BG}
+//                   alt="the Storly.BG | cosmestic content"
 //                   // layout="fill"
 //                   // objectFit="contain"
 //                 />
@@ -83,7 +83,7 @@
 // }
 
 import Image from "next/image";
-import sun from "assets/sun.png";
+import StorlyBG from "assets/StorlyBG.png";
 import Navigation from "@/components/layout/Navigation";
 import Link from "next/link";
 import { HiOutlineUser } from "react-icons/hi";
@@ -178,7 +178,7 @@ export default function Header() {
               className="absolute -top-[3px] right-[31px] -z-10 h-10 w-10
             "
             >
-              <Image src={sun} alt="the sun | cosmestic content" />
+              <Image src={StorlyBG} alt="the StorlyBG | cosmestic content" />
             </div>
           </a>
         </Link>

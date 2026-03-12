@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ActiveLinkImprove from "src/components/layout/ActiveLinkImprove";
 import { NavData } from "src/model/NavData";
-import sun from "assets/sun.png";
+import StorlyBG from "assets/StorlyBG.png";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi";
@@ -30,7 +30,7 @@ const HomePage = () => {
   return (
     <>
       <Meta
-        title="Lighthouse | Won't let you down"
+        title="Lighthous | Won't let you down"
         description="Lighthouse used to be my everything."
         image="/preview.png"
       />
@@ -54,20 +54,31 @@ const HomePage = () => {
             </ul>
           </nav>
           <Link href="/" passHref>
-            <a
-              className="text-[37px] relative -translate-x-8
-          xs:translate-y-5
-          md:translate-x-32 md:translate-y-0
-          w-[200px]
-          md:mt-5"
-            >
-              <span className="font-extrabold">Light</span>
-              <span className="font-normal drop-shadow-logo">house</span>
-              <div className="absolute top-[-3px] right-[49px] -z-10 h-14 w-14 md:right-[365px] md:top-[-2px]">
-                <Image src={sun} alt="the sun | cosmestic content" />
-              </div>
-            </a>
-          </Link>
+<a
+  className="flex items-center
+  text-[37px]
+  xs:translate-y-5
+  md:translate-x-32 md:translate-y-0
+  w-[200px]
+  md:mt-5"
+>
+  {/* Logo Image */}
+  <div className="relative h-10 w-10 mr-1">
+    <Image
+      src={StorlyBG}
+      alt="Storly logo"
+      fill
+      className="object-contain"
+    />
+  </div>
+
+  {/* Text */}
+  <div>
+    <span className="font-extrabold">Sto</span>
+    <span className="font-normal drop-shadow-logo">rly</span>
+  </div>
+</a>
+          </Link> 
           <div className="flex items-center shadow-md rounded-lg px-3 md:hidden">
             <FaSearch size={20} className="" />
             <input text="text" placeholder="Search" className="py-3 px-5" />
