@@ -12,8 +12,8 @@ export default function ProductCategoryPage({ products }: AppProps) {
   return (
     <>
       <Meta
-        title="Lighthouse | Category"
-        description="Lighthouse were my everything."
+        title="Storly | Category"
+        description="Storly were my everything."
         image="/preview.png"
       />
       <ProductCategory productsList={products} />;
