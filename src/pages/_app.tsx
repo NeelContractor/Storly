@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/favicon-sun.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon-StorlyBG.ico" type="image/x-icon" />
       </Head>
       <Provider store={store}>
         <Layout>
