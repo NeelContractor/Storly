@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ActiveLinkImprove from "src/components/layout/ActiveLinkImprove";
 import { NavData } from "src/model/NavData";
-import sun from "assets/sun.png";
+import StorlyBG from "assets/StorlyBG.png";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi";
