@@ -1,9 +1,9 @@
 import ProductList from "./ProductList";
-import Product from "src/model/Product";
+import Product, { ProductDocument } from "src/model/Product";
 import Filter from "./Filter/Filter";
 
 interface AppProps {
-  productsList: Product[];
+  productsList: ProductDocument[];
 }
 
 export default function MainContent({ productsList }: AppProps) {
