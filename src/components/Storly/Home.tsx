@@ -8,7 +8,6 @@ import { filterSearchActions } from "src/store/redux-toolkit/filterSearch";
 import ImageSearchBar from "../ProductCategory/ImageSearchBar";
 import axios from "axios";
 import { FaSortAmountDown, FaSortAmountDownAlt } from "react-icons/fa";
-// import Filter from "../ProductCategory/MainContent/Filter/Filter";
 import FilterStatus from "../ProductCategory/MainContent/Filter/Accordions/FilterStatus"
 import ProductList from "../ProductCategory/MainContent/ProductList";
 import { ProductDocument } from "src/model/Product";
