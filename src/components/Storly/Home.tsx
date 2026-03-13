@@ -1,7 +1,7 @@
 "use client"
 
 import CurrentPath from "@/components/common/CurrentPath";
-import { useRouter } from "next/router";
+// import { useRouter, useParams } from "next";
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "src/store/redux-toolkit/hooks";
 import { filterSearchActions } from "src/store/redux-toolkit/filterSearch";
@@ -10,11 +10,12 @@ import axios from "axios";
 import { FaSortAmountDown, FaSortAmountDownAlt } from "react-icons/fa";
 import FilterStatus from "../ProductCategory/MainContent/Filter/Accordions/FilterStatus"
 import ProductList from "../ProductCategory/MainContent/ProductList";
-import { ProductDocument } from "src/model/Product";
+import { Product } from "src/model/Product";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import PriceRange from "../ProductCategory/MainContent/Filter/PriceRange";
 import Checkboxs from "../ProductCategory/MainContent/Filter/Checkboxs";
+import { useRouter } from "next/router";
 
 export interface Shop {
   _id?: string;
@@ -35,37 +36,69 @@ const BACKEND_URL = "http://localhost:8080";
 
 export default function StorlyHomePage() {
   const router = useRouter();
+  console.log("Hi there")
+  // const params = useParams();
+  // console.log(params)
+  // const shopName = params.productCategory as string;
+  console.log(router)
   const dispatch = useAppDispatch();
-  const [products, setProducts] = useState<ProductDocument[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchShopProducts = async () => {
+      const data = await getAllProducts()
+      console.log(data)
+    }
+    fetchShopProducts()
+  }, [])
 
   // Fetch all products on mount
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const data = await getAllProducts();
-  //       setProducts(data);
-  //     } catch (error) {
-  //       console.error("Backend fetch error:", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-
-  console.log("shop name: ", router.query.productCategory)  // this is not returning anything
-  // Fetch products by shop whenever router.query.productCategory changes
   useEffect(() => {
+    if (!router.isReady) return;
+  
     const fetchShopProducts = async () => {
       try {
         const shopName = router.query.productCategory as string;
+  
         if (!shopName) return;
+  
+        console.log("Fetching shop:", shopName);
+  
         const data = await getProductsByShop(shopName);
-        setProducts(data); // product is not logging
+  
+        setProducts(data);
+  
+        console.log("products:", data);
       } catch (error) {
         console.error("Backend fetch error:", error);
       }
     };
+  
     fetchShopProducts();
-  }, [router.query.productCategory]);
+  }, [router.isReady, router.query.productCategory]);
+
+  // console.log("shop name: ", router.query.productCategory)  // this is not returning anything
+  // Fetch products by shop whenever router.query.productCategory changes
+  // useEffect(() => {
+  //   if (!router.isReady) return;
+  
+  //   const fetchShopProducts = async () => {
+  //     try {
+  //       const shopName = router.query.productCategory as string;
+  
+  //       if (!shopName) return;
+  
+  //       const data = await getProductsByShop(shopName);
+  //       setProducts(data);
+  
+  //       console.log("products:", data);
+  //     } catch (error) {
+  //       console.error("Backend fetch error:", error);
+  //     }
+  //   };
+  
+  //   fetchShopProducts();
+  // }, [router.isReady, router.query.productCategory]);
 
   useEffect(() => {
     dispatch(filterSearchActions.resetQuery());
@@ -78,7 +111,7 @@ export default function StorlyHomePage() {
         <Title productsList={products} />
         <ImageSearchBar />
       </div>
-      {products}
+      {JSON.stringify(products)}
       <MainContent productsList={products} />
     </div>
   );
@@ -86,18 +119,22 @@ export default function StorlyHomePage() {
 
 // API calls
 const getAllProducts = async () => {
-  const response = await axios.get<ApiResponse<ProductDocument[]>>(`${BACKEND_URL}/api/products`);
+  const response = await axios.get(`${BACKEND_URL}/api/products`);
+
+  console.log(response)
   return response.data.data;
 };
 
 const getProductsByShop = async (shopName: string) => {
-  const response = await axios.get<ApiResponse<ProductDocument[]>>(`${BACKEND_URL}/api/products/shop/${shopName}`);
+  console.log(shopName)
+  const response = await axios.get(`${BACKEND_URL}/api/products/shop/${shopName}`);
+  console.log(response.data.data)
   return response.data.data;
 };
 
 // Title Component
 interface TitleProps {
-  productsList: ProductDocument[];
+  productsList: Product[];
 }
 
 function Title({ productsList }: TitleProps) {
@@ -155,7 +192,7 @@ function Title({ productsList }: TitleProps) {
 
 // MainContent Component
 interface MainContentProps {
-  productsList: ProductDocument[];
+  productsList: Product[];
 }
 
 function MainContent({ productsList }: MainContentProps) {
@@ -169,7 +206,7 @@ function MainContent({ productsList }: MainContentProps) {
 
 // Filter Component
 interface FilterProps {
-  productsList: ProductDocument[];
+  productsList: Product[];
 }
 
 function Filter({ productsList }: FilterProps) {

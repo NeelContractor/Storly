@@ -3,7 +3,7 @@ import MainContent from "./MainContent/MainContent";
 import Rating from "./Rating";
 import Image from "next/image";
 import footerImage from "assets/footer3.jpg";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import { useRouter } from "next/router";
 import { useAppDispatch } from "src/store/redux-toolkit/hooks";
 import { useEffect } from "react";

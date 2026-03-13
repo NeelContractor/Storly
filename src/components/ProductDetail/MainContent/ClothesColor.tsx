@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import { useAppDispatch, useAppSelector } from "src/store/redux-toolkit/hooks";
 import { imageActions } from "src/store/redux-toolkit/imageSlice";
 

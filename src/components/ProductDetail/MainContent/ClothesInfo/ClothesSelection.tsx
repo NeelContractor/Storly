@@ -5,7 +5,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { HiCheck } from "react-icons/hi";
 import classes from "styles/ClothesSelection.module.css";
 import { useEffect, useState } from "react";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import determineSize from "../../../common/SizeAndColor/Size";
 import determineColor from "../../../common/SizeAndColor/Color";
 import { useAppDispatch } from "src/store/redux-toolkit/hooks";

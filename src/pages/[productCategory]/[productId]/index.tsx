@@ -1,7 +1,7 @@
 import ProductDetail from "@/components/ProductDetail/ProductDetail";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MongoClient, ObjectId } from "mongodb";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import Head from "next/head";
 import Meta from "@/components/common/Meta";
 interface AppProps {

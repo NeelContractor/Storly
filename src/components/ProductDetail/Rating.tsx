@@ -1,4 +1,4 @@
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import { Link } from "react-scroll";
 import RenderStar from "@/components/common/RenderStar";
 interface AppProps {

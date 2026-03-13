@@ -1,4 +1,4 @@
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 
 interface AppProps {
   singleProduct: Product;

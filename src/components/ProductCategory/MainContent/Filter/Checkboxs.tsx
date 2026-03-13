@@ -1,12 +1,12 @@
 import Accordions from "@/components/ProductCategory/MainContent/Filter/Accordions/AccordionsGeneral";
 import React from "react";
 import { HiCheck } from "react-icons/hi";
-import Product, { ProductDocument } from "src/model/Product";
+import { Product } from "src/model/Product";
 import { filterBrandActions } from "src/store/redux-toolkit/filterBrand";
 import { useAppDispatch, useAppSelector } from "src/store/redux-toolkit/hooks";
 
 type AppProps = {
-  productsList: ProductDocument[];
+  productsList: Product[];
 };
 
 export default function Checkboxs({ productsList }: AppProps) {

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { imageActions } from "src/store/redux-toolkit/imageSlice";
@@ -15,7 +15,7 @@ interface AppProps {
 
 export default function RecentlyViewed({ allProductsSSG }: AppProps) {
   const [rederedViewedProducts, setRederedViewedProducts] = useState<Product[]>(
-    []
+  []
   );
   const viewedProductIds = useAppSelector(
     (state) => state.viewed.viewedProductIds

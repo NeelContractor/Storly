@@ -2,7 +2,7 @@ import ClothesColor from "./ClothesColor";
 import ClothesInfo from "./ClothesInfo/ClothesInfo";
 import ClothesShow from "./ClothesShow";
 import SimilarProduct from "./SimilarProduct";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import RecentlyViewed from "./RecentlyViewed";
 interface AppProps {
   singleProduct: Product;

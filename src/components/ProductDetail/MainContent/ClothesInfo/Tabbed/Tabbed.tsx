@@ -1,7 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import SizeGuide from "./SizeGuide";
 import Specifications from "./Specifications";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import Comment from "./Comment/Comment";
 import { useCallback, useState } from "react";
 import useStore from "src/store/zustand/useStore";
