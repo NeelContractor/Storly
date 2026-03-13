@@ -8,7 +8,6 @@ import { filterSearchActions } from "src/store/redux-toolkit/filterSearch";
 import ImageSearchBar from "../ProductCategory/ImageSearchBar";
 import axios from "axios";
 import { FaSortAmountDown, FaSortAmountDownAlt } from "react-icons/fa";
-// import Filter from "../ProductCategory/MainContent/Filter/Filter";
 import FilterStatus from "../ProductCategory/MainContent/Filter/Accordions/FilterStatus"
 import ProductList from "../ProductCategory/MainContent/ProductList";
 import { ProductDocument } from "src/model/Product";
@@ -40,18 +39,19 @@ export default function StorlyHomePage() {
   const [products, setProducts] = useState<ProductDocument[]>([]);
 
   // Fetch all products on mount
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getAllProducts();
-        setProducts(data);
-      } catch (error) {
-        console.error("Backend fetch error:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await getAllProducts();
+  //       setProducts(data);
+  //     } catch (error) {
+  //       console.error("Backend fetch error:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
+  console.log("shop name: ", router.query.productCategory)  // this is not returning anything
   // Fetch products by shop whenever router.query.productCategory changes
   useEffect(() => {
     const fetchShopProducts = async () => {
@@ -59,7 +59,7 @@ export default function StorlyHomePage() {
         const shopName = router.query.productCategory as string;
         if (!shopName) return;
         const data = await getProductsByShop(shopName);
-        setProducts(data);
+        setProducts(data); // product is not logging
       } catch (error) {
         console.error("Backend fetch error:", error);
       }
@@ -78,6 +78,7 @@ export default function StorlyHomePage() {
         <Title productsList={products} />
         <ImageSearchBar />
       </div>
+      {products}
       <MainContent productsList={products} />
     </div>
   );

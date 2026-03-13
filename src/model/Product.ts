@@ -28,7 +28,6 @@
 
 // export default Product;
 
-
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface ProductDocument extends Document {
