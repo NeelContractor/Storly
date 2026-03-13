@@ -4,7 +4,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { imageActions } from "src/store/redux-toolkit/imageSlice";

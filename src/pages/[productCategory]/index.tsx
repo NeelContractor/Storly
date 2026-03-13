@@ -1,7 +1,7 @@
 import ProductCategory from "@/components/ProductCategory/ProductCategory";
 import { MongoClient } from "mongodb";
 import { GetStaticPaths, GetStaticProps } from "next";
-import Product from "src/model/Product";
+import { Product } from "src/model/Product";
 import Head from "next/head";
 import Meta from "@/components/common/Meta";
 type AppProps = {
@@ -12,7 +12,7 @@ export default function ProductCategoryPage({ products }: AppProps) {
   return (
     <>
       <Meta
-        title="Storly | Category"
+        title="Storly"
         description="Storly were my everything."
         image="/preview.png"
       />
