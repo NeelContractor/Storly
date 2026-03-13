@@ -51,6 +51,7 @@ export default function StorlyHomePage() {
   //   fetchData();
   // }, []);
 
+  console.log("shop name: ", router.query.productCategory)  // this is not returning anything
   // Fetch products by shop whenever router.query.productCategory changes
   useEffect(() => {
     const fetchShopProducts = async () => {
@@ -58,7 +59,7 @@ export default function StorlyHomePage() {
         const shopName = router.query.productCategory as string;
         if (!shopName) return;
         const data = await getProductsByShop(shopName);
-        setProducts(data);
+        setProducts(data); // product is not logging
       } catch (error) {
         console.error("Backend fetch error:", error);
       }
