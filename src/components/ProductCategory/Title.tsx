@@ -2,12 +2,12 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaSortAmountDownAlt } from "react-icons/fa";
 import { FaSortAmountDown } from "react-icons/fa";
-import Product from "src/model/Product";
+import Product, { ProductDocument } from "src/model/Product";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useStore from "src/store/zustand/useStore";
 interface AppProps {
-  productsList: Product[];
+  productsList: ProductDocument[];
 }
 
 export default function Title({ productsList }: AppProps) {
