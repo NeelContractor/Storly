@@ -40,17 +40,17 @@ export default function StorlyHomePage() {
   const [products, setProducts] = useState<ProductDocument[]>([]);
 
   // Fetch all products on mount
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getAllProducts();
-        setProducts(data);
-      } catch (error) {
-        console.error("Backend fetch error:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await getAllProducts();
+  //       setProducts(data);
+  //     } catch (error) {
+  //       console.error("Backend fetch error:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   // Fetch products by shop whenever router.query.productCategory changes
   useEffect(() => {
@@ -78,6 +78,7 @@ export default function StorlyHomePage() {
         <Title productsList={products} />
         <ImageSearchBar />
       </div>
+      {products}
       <MainContent productsList={products} />
     </div>
   );
