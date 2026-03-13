@@ -167,21 +167,50 @@ export default function Header() {
             </div>
           </div>
         )}
-        <Link href="/" passHref>
-          <a
-            className="text-[27px] relative -translate-x-8
-          xs:translate-y-5"
-          >
-            <span className="font-extrabold">Light</span>
-            <span className="font-normal drop-shadow-logo">house</span>
-            <div
-              className="absolute -top-[3px] right-[31px] -z-10 h-10 w-10
-            "
-            >
-              <Image src={StorlyBG} alt="the StorlyBG | cosmestic content" />
-            </div>
-          </a>
-        </Link>
+   
+
+        {/* <Link href="/" passHref>
+  <div className="flex items-center gap-2">
+
+    <Image
+      src={StorlyBG}
+      alt="StorlyBG cosmetic content"
+      className="w-5 h-10"
+    />
+
+    <span className="font-roboto font-semibold text-4xl text-[#333333]">
+      Storly
+    </span>
+
+  </div>
+</Link> */}
+
+{ <Link href="/">
+  <div className="flex items-center justify-center gap-1 py-4">
+    
+    <Image
+      src={StorlyBG}
+      alt="Storly Logo"
+      width={50}
+      height={50}
+    />
+
+    <span className="font-roboto font-semibold text-5xl text-[#6e1784]">
+      Storly
+    </span>
+
+  </div>
+</Link> }
+
+{/* <link href="/">
+   <a className="flex items-center gap-3">
+    <Image src={StorlyBG} alt="Storly Logo" width={42} height={42} />
+    <span className="text-3xl font-semibold tracking-wide">
+      Storly
+    </span>
+  </a>
+</link> */}
+
 
         <Link href="/cart" passHref>
           <a className="relative">
