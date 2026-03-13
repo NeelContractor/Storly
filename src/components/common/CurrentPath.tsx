@@ -16,17 +16,17 @@ export default function PathAndRate({ url1, url2 }: AppProps) {
       dark:text-white 
     sm:text-xs"
     >
-      <Link href="/">
+      {/* <Link href="/">
         <a>Homepage</a>
-      </Link>
-      <HiOutlineChevronRight className="text-base" />
-      <Link href={`/${router.query.productCategory}`}>
-        <a className="capitalize">{url1}</a>
-      </Link>
+      </Link> */}
+      {/* <HiOutlineChevronRight className="text-base" /> */}
+      {/* <Link href={`/${router.query.productCategory}`}> */}
+        {/* <a className="capitalize">{url1}</a> */}
+      {/* </Link> */}
       {url2 && (
         <>
           <HiOutlineChevronRight className="text-base " />
-          <Link
+          {/* <Link
             href={`/${router.query.productCategory}/${router.query.productId}`}
           >
             <a>
@@ -38,7 +38,7 @@ export default function PathAndRate({ url1, url2 }: AppProps) {
                 })
                 .join(" ")}
             </a>
-          </Link>
+          </Link> */}
         </>
       )}
     </div>

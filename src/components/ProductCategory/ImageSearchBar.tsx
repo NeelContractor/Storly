@@ -1,6 +1,6 @@
 import { BiSearch } from "react-icons/bi";
 import Image from "next/image";
-import saleOffImg from "assets/saleOff.png";
+// import saleOffImg from "assets/saleOff.png";
 import { useAppDispatch, useAppSelector } from "src/store/redux-toolkit/hooks";
 import React from "react";
 import { filterSearchActions } from "src/store/redux-toolkit/filterSearch";
@@ -73,7 +73,7 @@ export default function ImageSearchBar() {
         className="absolute top-[0px] right-[-70px]
       md:hidden"
       >
-        <Image src={saleOffImg} alt="" />
+        {/* <Image src={saleOffImg} alt="" /> */}
       </div>
       <div
         className="absolute top-[0px] right-[15px]
